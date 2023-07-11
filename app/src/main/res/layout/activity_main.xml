@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--Step 2 And which is wrapping the layout with the layout tags.-->
+<!--So in Android, the layout tag should be the outermost.
+Attack.-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--In order to allow data binding class when and the object when creating an object of this layout to recognize
+that it is of type layout.-->
+<!--press Ctrl + Alt + Shift + L to format the code-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="149dp"
+            android:text="Data Binding app"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="79dp"
+            android:layout_marginEnd="122dp"
+            android:layout_marginBottom="99dp"
+            android:ems="10"
+            android:hint="Enter your name"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="179dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginEnd="153dp"
+            android:layout_marginBottom="315dp"
+            android:text="Say Hello"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
